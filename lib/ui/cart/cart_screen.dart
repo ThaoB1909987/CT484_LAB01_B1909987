@@ -66,14 +66,14 @@ class CartScreen extends StatelessWidget{
             ),
             TextButton(
               onPressed: cart.totalAmount <= 0
-              ? null
-              : () {
-                context.read<OrdersManager>().addOrder(
-                  cart.products,
-                  cart.totalAmount,
-                );
-                cart.clear();
-              },
+                ? null
+                : () {
+                  context.read<OrdersManager>().addOrder(
+                    cart.products,
+                    cart.totalAmount,
+                  );
+                  cart.clear();
+                },
               style: TextButton.styleFrom(
                 textStyle:
                 TextStyle(color: Theme.of(context).primaryColor),
